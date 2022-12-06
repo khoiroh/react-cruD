@@ -1,0 +1,15 @@
+form{
+    text-align: left;
+    border: 1px solid black;
+    padding: 10px;
+}
+.input{
+    margin-bottom: 5px;
+}
+.tam{
+    background-color: blue;  
+    color: wheat;
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+}
