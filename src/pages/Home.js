@@ -4,15 +4,15 @@ import { Button } from "react-bootstrap";
 import "../style/Home.css"
 
 export default function Home() {
-    const [buku, setBuku] = useState([]);
+    const [buku, setBuku] = useState([]); //State berfungsi untuk menyimpan data sementara
 
     const getAll = () => {
         axios
         .get("http://localhost:8000/daftarBuku")
-        .then((res) => {
+        .then((res) => {          // untuk menge push data setelah di edit
             setBuku(res.data);
         })
-        .catch((error) => {
+        .catch((error) => {   // => untuk mengetahui jika terjadi error
             alert("Terjadi kesalahan " + error);
         });
     };
@@ -21,6 +21,7 @@ export default function Home() {
         getAll();
     }, []);
 
+    // menthod untuk menghapus sebuah data sesuai dengan id nya
     const deleteUser = async (id) => {
         axios.delete("http://localhost:8000/daftarBuku/" + id);
         alert("user berhasil di hapus gays!!");
@@ -41,7 +42,7 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {buku.map((book, index) => (
+          {buku.map((book, index) => ( //map => untuk memetakan sebuah data 
             <tr key={book.id}>
               <td>{index + 1}</td>
               <td>{book.judul}</td>
@@ -49,7 +50,7 @@ export default function Home() {
               <td>{book.tahunTerbit}</td>
               <td>{book.pengarang}</td>
               <td>
-                <Button
+                <Button 
                   variant="danger"
                   className="mx-1"
                   onClick={() => deleteUser(book.id)}

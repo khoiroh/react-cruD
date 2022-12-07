@@ -4,17 +4,17 @@ import { Form, InputGroup, Modal } from 'react-bootstrap';
 import "../style/Nav.css"
 
 function NavigationBar() {
-    const [show, setShow] = useState(false);
-    const [judul, setJudul] = useState("");
+    const [show, setShow] = useState(false); 
+    const [judul, setJudul] = useState("");  //State berfungsi untuk menyimpan data sementara
     const [deskripsi, setDeskripsi] = useState("");
     const [tahunTerbit, setTahunTerbit] = useState("");
     const [pengarang, setPengarang] = useState("");
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false); // handleClose untuk menyetel ke false
+    const handleShow = () => setShow(true); // handleShow untuk menyetel ke true
 
     const addUser = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
 
         const data = {
             judul: judul,
@@ -25,10 +25,10 @@ function NavigationBar() {
 
         await axios
         .post(" http://localhost:8000/daftarBuku",  data)
-        .then(() => {
-            window.location.reload();
+        .then(() => {                   // untuk menge push data setelah di edit
+            window.location.reload(); 
         })
-        .catch((error) => {
+        .catch((error) => { // alert untuk mengetahui terjadinya error
             alert("Terjadi kesalahan " + error);
         });
     };

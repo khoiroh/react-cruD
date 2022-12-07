@@ -9,10 +9,11 @@ function App() {
   return (
     <>
     <NavigationBar />
-    <BrowserRouter>
+    {/* untuk menjaga UI tetap sinkron dengan URL*/}
+    <BrowserRouter> 
      <main>
-      <Switch>
-        <Route path="/" component={Home} exact/>
+      <Switch>        {/* untuk merender rute secara eksklusif */}
+        <Route path="/" component={Home} exact/>          {/*ROUTE untuk pengalihan sisi server */}
         <Route path="/edit/:id" component={Edit} exact/>
       </Switch>
      </main>

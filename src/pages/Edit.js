@@ -5,15 +5,15 @@ import { useHistory, useParams } from 'react-router-dom'
 import "../style/edit.css"
 
 export default function Edit() {
-    const param = useParams();
-    const [judul, setJudul] = useState("");
+    const param = useParams(); // mengembalikan objek
+    const [judul, setJudul] = useState(""); //State berfungsi untuk menyimpan data sementara
     const [deskripsi, setDeskripsi] = useState("");
     const [tahunTerbit, setTahunTerbit] = useState("");
     const [pengarang, setPengarang] = useState("");
 
-    const history = useHistory();
+    const history = useHistory(); // akses ke instance riwayat yang dapat Anda gunakan untuk bernavigasi.
 
-    useEffect(() => {
+    useEffect(() => { // mengambil data, memperbarui DOM secara langsung
         axios
         .get(" http://localhost:8000/daftarBuku/" + param.id)
         .then((response) => {
@@ -28,7 +28,7 @@ export default function Edit() {
         });
     }, []);
 
-    const submitActionHalder = async (event) => {
+    const submitActionHalder = async (event) => { //untuk mengeksekusi setiap kali event dipicu.
         event.preventDefault();
 
         await axios
@@ -40,10 +40,10 @@ export default function Edit() {
         })
         .then(() => {
             alert("berhasil mengubah data user slurrr .. ");
-            history.push("/");
+            history.push("/");  // untuk menge push data setelah di edit
             window.location.reload();
         })
-        .catch((error) => {
+        .catch((error) => {     // => untuk mengetahui jika terjadi error
             alert("Terjadinya kesalahan: " + error)
         });
     };
