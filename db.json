@@ -1,32 +1,32 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "username": "khoir",
+      "password": "3005"
+    }
+  ],
   "daftarBuku": [
     {
-      "judul": "Si Kancil",
-      "deskripsi": "Si Kancil ini mencuri timun",
-      "tahunTerbit": "1988-12-12",
-      "pengarang": "siapapun",
+      "judul": "fantasiia",
+      "deskripsi": "mencritakan tentang khayalan",
+      "tahunTerbit": "2018-12-15",
+      "pengarang": "candzalexxxxsds",
       "id": 1
     },
     {
-      "judul": "Keong Mas A",
-      "deskripsi": "Cerita rakyat keong mas yang melegenda",
-      "tahunTerbit": "1988-12-12",
-      "pengarang": "Nisa",
+      "judul": "bukuku",
+      "deskripsi": "tentangku",
+      "tahunTerbit": "2022-12-23",
+      "pengarang": "diriku",
       "id": 2
     },
     {
-      "judul": "cerita cerita",
-      "deskripsi": "menceritakan tentang cerita",
-      "tahunTerbit": "2022-05-30",
-      "pengarang": "gue-elu     ",
-      "id": 6
-    },
-    {
-      "judul": "legendaa",
-      "deskripsi": "menceritakan tentang legenda",
-      "tahunTerbit": "2022-11-26",
-      "pengarang": "loexxxxxx",
-      "id": 7
+      "judul": "majalah",
+      "deskripsi": "tentang berita",
+      "tahunTerbit": "2022-11-30",
+      "pengarang": "tergantungg",
+      "id": 3
     }
   ]
 }
